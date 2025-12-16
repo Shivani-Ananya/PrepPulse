@@ -1,0 +1,179 @@
+/* =========================
+   GLOBAL RESET & BASE
+   ========================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background: linear-gradient(135deg, #fdf4ff, #faf5ff, #eff6ff);
+  color: #374151;
+}
+
+/* Smooth interaction feel */
+button,
+input,
+select,
+textarea {
+  transition: all 0.2s ease;
+}
+
+/* =========================
+   TEXT UTILITIES
+   ========================= */
+
+.gradient-text {
+  background: linear-gradient(135deg, #f9a8d4, #c084fc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.subtle-text {
+  color: #6b7280;
+  font-size: 0.875rem;
+}
+
+/* =========================
+   GLASSMORPHISM CORE
+   ========================= */
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-radius: 1.5rem;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.08);
+}
+
+/* Slight hover lift for cards */
+.glass-card:hover {
+  transform: translateY(-2px);
+}
+
+/* =========================
+   BUTTON STYLES
+   ========================= */
+
+.primary-btn {
+  background: linear-gradient(135deg, #f9a8d4, #c084fc);
+  color: white;
+  padding: 0.6rem 1.5rem;
+  border-radius: 9999px;
+  font-weight: 500;
+  border: none;
+}
+
+.primary-btn:hover {
+  opacity: 0.9;
+  transform: scale(1.03);
+}
+
+.secondary-btn {
+  background: rgba(255, 255, 255, 0.6);
+  color: #7c3aed;
+  padding: 0.6rem 1.5rem;
+  border-radius: 9999px;
+  border: 1px solid rgba(124, 58, 237, 0.25);
+}
+
+.secondary-btn:hover {
+  background: rgba(255, 255, 255, 0.8);
+}
+
+/* =========================
+   TAGS / PILLS
+   ========================= */
+
+.tag {
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.tag-pink {
+  background: #fce7f3;
+  color: #db2777;
+}
+
+.tag-purple {
+  background: #ede9fe;
+  color: #7c3aed;
+}
+
+.tag-green {
+  background: #dcfce7;
+  color: #16a34a;
+}
+
+.tag-yellow {
+  background: #fef3c7;
+  color: #ca8a04;
+}
+
+/* =========================
+   INPUTS
+   ========================= */
+
+.input-soft {
+  background: rgba(255, 255, 255, 0.75);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 1rem;
+  padding: 0.75rem 1rem;
+  outline: none;
+}
+
+.input-soft:focus {
+  border-color: #c084fc;
+}
+
+/* =========================
+   NAVIGATION (BOTTOM BAR)
+   ========================= */
+
+.bottom-nav {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(18px);
+  border-radius: 1.5rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* =========================
+   MISC HELPERS
+   ========================= */
+
+.soft-divider {
+  height: 1px;
+  background: linear-gradient(to right, transparent, #e5e7eb, transparent);
+  margin: 1rem 0;
+}
+
+.fade-in {
+  animation: fadeIn 0.4s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================
+   MOBILE REFINEMENT
+   ========================= */
+
+@media (max-width: 640px) {
+  .glass-card {
+    border-radius: 1.25rem;
+  }
+}
